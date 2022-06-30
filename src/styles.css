@@ -1,0 +1,102 @@
+.container {
+  font-family: "Roboto", sans-serif;
+  margin: auto 0;
+  padding: 50px 100px;
+  display: block;
+}
+
+.lastcity {
+  color: #1aa179;
+  margin: auto 0;
+  padding: 20px 10px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+  width: 60%;
+}
+input {
+  border: none;
+  margin-left: 10px;
+}
+.searchForm {
+  border: 2px solid #1aa179;
+  margin: auto 0;
+  display: inline-block;
+  border-radius: 20px;
+  padding: 8px 10px;
+  width: 60%;
+}
+.searchButton {
+  border: 2px solid #1aa179;
+  padding: 4px 10px;
+  margin-right: 5px;
+  border-radius: 20px;
+  background: rgba(26, 161, 121, 0.1);
+  position: relative;
+  right: 180px;
+  color: #06281e;
+  font-weight: 600;
+}
+.currentButton {
+  border: 2px solid #1aa179;
+  padding: 4px 10px;
+  margin-right: 5px;
+  border-radius: 20px;
+  background: rgba(26, 161, 121, 0.1);
+  position: relative;
+  left: -180px;
+  color: #06281e;
+  font-weight: 600;
+}
+.city {
+  width: 70%;
+  color: #13795b;
+  margin: auto 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+.currentCity {
+  list-style: none;
+  padding: 55px 10px;
+}
+.weekDay,
+.date {
+  padding-right: 15px;
+}
+.imageCurrent {
+  font-size: 100px;
+  text-align: right;
+  padding: 35px 5px;
+}
+.currentTemp {
+  list-style: none;
+  padding: 40px 0px;
+}
+.nowTemp {
+  font-size: 60px;
+}
+
+a {
+  color: #13795b;
+  text-decoration: none;
+}
+
+.system {
+  font-size: 24px;
+}
+
+.forecast {
+  width: 65%;
+  color: #13795b;
+  margin: auto 0;
+  font-size: 22px;
+  font-weight: 500;
+}
+.forecast1,
+.forecast2,
+.forecast3,
+.forecast4,
+.forecast5 {
+  list-style: none;
+  padding-left: 10px;
+}

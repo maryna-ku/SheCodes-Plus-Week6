@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weatherapp</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d9d3c7572f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row lastcity">
+        <div class="col">Last city 1</div>
+        <div class="col">Last city 2</div>
+        <div class="col">Last city 3</div>
+        <div class="col">Last city 4</div>
+      </div>
+      <form class="searchForm" id="searchForm">
+        <input type="text" placeholder="Enter a city" id="searchInput" />
+      </form>
+      <span>
+        <button class="currentButton" id="currentButton" type="submit">
+          Current
+        </button>
+      </span>
+      <span>
+        <button class="searchButton" id="searchButton" type="submit">
+          Search
+        </button>
+      </span>
+
+      <div class="row city">
+        <div class="col">
+          <ul class="currentCity">
+            <li class="cityName">
+              <span id="cityName"> KYIV</span>,
+              <span class="country" id="country">UKRAINE</span>
+            </li>
+            <li class="dateCurrent">
+              <span class="weekDay">TH</span><span class="date">MAY 26</span
+              ><span class="time">20:13</span>
+            </li>
+            <li class="description">Mostly Sunny</li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="imageCurrent">
+            <i class="fa-solid fa-cloud-sun"></i>
+          </div>
+        </div>
+        <div class="col">
+          <ul class="currentTemp">
+            <li class="nowTemp">
+              <span id="currentTemp">19</span>°<span class="system" id="celsius"
+                ><a href="">C</a></span
+              ><span class="system">|</span
+              ><span class="system" id="fahrenheit"><a href="">F</a></span>
+            </li>
+            <li class="realFeel">RealFeel <span class="realTemp">18°</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row forecast">
+        <div class="col">
+          <ul class="forecast1">
+            <li class="forecastDay">Fri</li>
+            <li class="forecastImage">
+              <i class="fa-solid fa-cloud-sun"></i>
+            </li>
+            <li class="forecastTemp">22°</li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="forecast2">
+            <li class="forecastDay">Sat</li>
+            <li class="forecastImage">
+              <i class="fa-solid fa-cloud-sun-rain"></i>
+            </li>
+            <li class="forecastTemp">20°</li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="forecast3">
+            <li class="forecastDay">Sun</li>
+            <li class="forecastImage">
+              <i class="fa-solid fa-cloud-sun-rain"></i>
+            </li>
+            <li class="forecastTemp">20°</li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="forecast4">
+            <li class="forecastDay">Mon</li>
+            <li class="forecastImage">
+              <i class="fa-solid fa-cloud-bolt"></i>
+            </li>
+            <li class="forecastTemp">25°</li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="forecast5">
+            <li class="forecastDay">Tue</li>
+            <li class="forecastImage">
+              <i class="fa-solid fa-cloud-sun"></i>
+            </li>
+            <li class="forecastTemp">24°</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

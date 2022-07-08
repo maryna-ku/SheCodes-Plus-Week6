@@ -35,18 +35,20 @@
         <div class="col">Last city 3</div>
         <div class="col">Last city 4</div>
       </div>
-      <form class="searchForm" id="searchForm">
-        <input type="text" placeholder="Enter a city" id="searchInput" />
-      </form>
-      <span>
-        <button class="currentButton" id="currentButton" type="submit">
-          Current
-        </button>
-      </span>
-      <span>
-        <button class="searchButton" id="searchButton" type="submit">
-          Search
-        </button>
+      <span id="search">
+        <form class="searchForm" id="searchForm">
+          <input type="text" placeholder="Enter a city" id="searchInput" />
+        </form>
+        <span>
+          <button class="currentButton" id="currentButton" type="submit">
+            Current
+          </button>
+        </span>
+        <span>
+          <button class="searchButton" id="searchButton" type="submit">
+            Search
+          </button>
+        </span>
       </span>
 
       <div class="row city">
@@ -60,12 +62,15 @@
               <span class="weekDay">TH</span><span class="date">MAY 26</span
               ><span class="time">20:13</span>
             </li>
-            <li class="description">Mostly Sunny</li>
+            <li class="description">
+              <span id="description">Mostly Sunny</span>
+              <div>Wind: <span id="wind">11</span>m/s</div>
+            </li>
           </ul>
         </div>
         <div class="col">
           <div class="imageCurrent">
-            <i class="fa-solid fa-cloud-sun"></i>
+            <img src="" alt="" id="currentImage"></i>
           </div>
         </div>
         <div class="col">
@@ -128,7 +133,7 @@
           </ul>
         </div>
       </div>
-      <span id="GitHub"
+      <span id="gitHub"
         ><a href="https://github.com/maryna-ku/SheCodes-Plus-Week6"
           >Open-source code</a
         >

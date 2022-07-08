@@ -28,19 +28,26 @@ timeCurrent.innerHTML = hour + ":" + minutes;
 
 function showWeather(response) {
   console.log(response);
-
+  let currentImage = document.querySelector("#currentImage");
   let cityName = document.querySelector("#cityName");
   let country = document.querySelector("#country");
-  let weatherDescription = document.querySelector(".description");
+  let weatherDescription = document.querySelector("#description");
   let weatherDescr = response.data.weather[0].description;
   let currentTemp = document.querySelector("#currentTemp");
   let realFeel = document.querySelector(".realTemp");
+  let wind = document.querySelector("#wind");
   cityName.innerHTML = response.data.name.toUpperCase().trim();
   country.innerHTML = response.data.sys.country;
   weatherDescription.innerHTML =
     weatherDescr.charAt(0).toUpperCase() + weatherDescr.slice(1);
   currentTemp.innerHTML = Math.round(response.data.main.temp);
   realFeel.innerHTML = Math.round(response.data.main.feels_like);
+  wind.innerHTML = response.data.wind.speed;
+  currentImage.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  currentImage.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(event) {

@@ -9,11 +9,11 @@
 .lastcity {
   color: #1aa179;
   margin: 0 auto;
-  padding: 20px 10px;
+  padding: 20px 0px;
   font-size: 18px;
   font-weight: 600;
   text-align: left;
-  width: 80%;
+  width: 75%;
 }
 input {
   border: none;
@@ -21,6 +21,8 @@ input {
 }
 #search {
   margin: 0 auto;
+  position: relative;
+  left: 70px;
 }
 .searchForm {
   border: 2px solid #1aa179;
@@ -55,13 +57,14 @@ input {
 .city {
   color: #13795b;
   margin: 0 auto;
-  font-size: 24px;
+  padding-left: 20px;
+  font-size: 20px;
   font-weight: 600;
   width: 85%;
 }
 .currentCity {
   list-style: none;
-  padding: 55px 10px 10px 0px;
+  padding: 55px 0px 10px 0px;
 }
 .weekDay,
 .date {
@@ -95,6 +98,8 @@ a {
   margin: 0 auto;
   font-size: 22px;
   font-weight: 500;
+  position: relative;
+  right: 20px;
 }
 .forecast1,
 .forecast2,
@@ -102,11 +107,10 @@ a {
 .forecast4,
 .forecast5 {
   list-style: none;
-  padding-left: 10px;
 }
 
 #gitHub {
   padding-left: 90px;
   margin: 0 auto;
-  width: 80%;
+  width: 85%;
 }

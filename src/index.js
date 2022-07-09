@@ -36,11 +36,12 @@ function showWeather(response) {
   let currentTemp = document.querySelector("#currentTemp");
   let realFeel = document.querySelector(".realTemp");
   let wind = document.querySelector("#wind");
+  celsiusTemp = response.data.main.temp;
   cityName.innerHTML = response.data.name.toUpperCase().trim();
   country.innerHTML = response.data.sys.country;
   weatherDescription.innerHTML =
     weatherDescr.charAt(0).toUpperCase() + weatherDescr.slice(1);
-  currentTemp.innerHTML = Math.round(response.data.main.temp);
+  currentTemp.innerHTML = Math.round(celsiusTemp);
   realFeel.innerHTML = Math.round(response.data.main.feels_like);
   wind.innerHTML = response.data.wind.speed;
   currentImage.setAttribute(
@@ -83,15 +84,18 @@ currentButton.addEventListener("click", currentCity);
 function currentTempF(event) {
   event.preventDefault();
   let currentTempF = document.querySelector("#currentTemp");
-  currentTempF.innerHTML = "60";
+  let tempF = celsiusTemp * (9 / 5) + 32;
+  currentTempF.innerHTML = Math.round(tempF);
 }
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", currentTempF);
 
+let celsiusTemp = null;
+
 function currentTempC(event) {
   event.preventDefault();
   let currentTempC = document.querySelector("#currentTemp");
-  currentTempC.innerHTML = "20";
+  currentTempC.innerHTML = Math.round(celsiusTemp);
 }
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", currentTempC);

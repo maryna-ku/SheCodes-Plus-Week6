@@ -124,29 +124,3 @@ searchButton.addEventListener("click", searchCity);
 
 let currentButton = document.querySelector("#currentButton");
 currentButton.addEventListener("click", currentCity);
-
-function currentTempF(event) {
-  event.preventDefault();
-  let currentTempF = document.querySelector("#currentTemp");
-  let tempF = celsiusTemp * (9 / 5) + 32;
-  currentTempF.innerHTML = Math.round(tempF);
-  let realFeelFahrenheitElement = document.querySelector(".realTemp");
-  let realTempF = realFeelCelsius * (9 / 5) + 32;
-  realFeelFahrenheitElement.innerHTML = Math.round(realTempF);
-}
-
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", currentTempF);
-
-let celsiusTemp = null;
-let realFeelCelsius = null;
-
-function currentTempC(event) {
-  event.preventDefault();
-  let currentTempC = document.querySelector("#currentTemp");
-  currentTempC.innerHTML = Math.round(celsiusTemp);
-  let realFeelCelsiusElement = document.querySelector(".realTemp");
-  realFeelCelsiusElement.innerHTML = Math.round(realFeelCelsius);
-}
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", currentTempC);

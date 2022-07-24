@@ -26,7 +26,8 @@ dateCurrent.innerHTML = month.toUpperCase() + " " + date;
 let timeCurrent = document.querySelector(".time");
 timeCurrent.innerHTML = hour + ":" + minutes;
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = "";
   let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
@@ -48,9 +49,12 @@ function displayForecast() {
 
   forecastElement.innerHTML = forecastHTML;
 }
-
+function getForecast(coordinates) {
+  let apiKey = "88a416ced747d697656c3ab76d89fef3";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 function showWeather(response) {
-  console.log(response);
   let currentImage = document.querySelector("#currentImage");
   let cityName = document.querySelector("#cityName");
   let country = document.querySelector("#country");
@@ -74,6 +78,7 @@ function showWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   currentImage.setAttribute("alt", response.data.weather[0].description);
+  getForecast(response.data.coord);
 }
 
 function searchCity(event) {
@@ -115,7 +120,7 @@ function currentTempF(event) {
   let realTempF = realFeelCelsius * (9 / 5) + 32;
   realFeelFahrenheitElement.innerHTML = Math.round(realTempF);
 }
-displayForecast();
+
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", currentTempF);
 

@@ -83,23 +83,22 @@ a {
   font-size: 24px;
 }
 
-.forecast {
-  width: 80%;
+#forecast {
   color: #13795b;
   margin: 0 auto;
   font-size: 22px;
   font-weight: 500;
+  width: 80%;
   position: relative;
   right: 20px;
 }
-.forecast1,
-.forecast2,
-.forecast3,
-.forecast4,
-.forecast5 {
+.forecast1 {
   list-style: none;
 }
-
+#forecastImage {
+  position: relative;
+  right: 10px;
+}
 #gitHub {
   padding-left: 90px;
   margin: 0 auto;

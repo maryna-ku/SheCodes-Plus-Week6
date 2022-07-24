@@ -26,6 +26,29 @@ dateCurrent.innerHTML = month.toUpperCase() + " " + date;
 let timeCurrent = document.querySelector(".time");
 timeCurrent.innerHTML = hour + ":" + minutes;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="col">
+     <ul class="forecast1" >
+         <li class="forecastDay" id="forecastDay1">${day}</li>
+            <li class="forecastImage" id="forecastImage1">
+              <i class="fa-solid fa-cloud-sun"></i>
+            </li>
+          <li class="forecastTemp" id="forecastTemp1">22°</li>
+       </ul>
+  </div>
+  `;
+  });
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showWeather(response) {
   console.log(response);
   let currentImage = document.querySelector("#currentImage");
@@ -92,6 +115,7 @@ function currentTempF(event) {
   let realTempF = realFeelCelsius * (9 / 5) + 32;
   realFeelFahrenheitElement.innerHTML = Math.round(realTempF);
 }
+displayForecast();
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", currentTempF);
 
